@@ -1,0 +1,84 @@
+generated: '2026-09-27'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 5
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - portal
+  - support
+  - website
+hosts:
+- host: api.avelios.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: avelios.com
+  role: api
+  relation: own
+- host: avelios.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: avelios.com
+  role: other
+  relation: own
+- host: customer.support.avelios.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: avelios.com
+  role: support
+  relation: own
+- host: portal.avelios.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - api
+  - docs
+  registrable_domain: avelios.com
+  role: portal
+  relation: own
+- host: www.avelios.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Support
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: avelios.com
+  role: website
+  relation: own

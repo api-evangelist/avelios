@@ -1,23 +1,79 @@
 aid: avelios
+
 name: Avelios
-description: 'Avelios is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Avelios Medical provides a modular, data‑driven clinic platform that integrates digital treatment documentation, AI‑powered analytics,
+  and automated administrative processes. Their operating system enables intelligent patient care across hospitals and clinics, offering SaaS
+  solutions for digital infrastructure, treatment planning, and big‑data research. Founded to transform healthcare delivery, Avelios combines
+  innovative software with a focus on data security and regulatory compliance, serving the European market and expanding globally.
+
 url: https://raw.githubusercontent.com/api-evangelist/avelios/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Healthcare
+- SaaS
+- DigitalHealth
+- AI
+- Europe
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/avelios-llms.txt
+- type: SecurityTxt
+  url: well-known/avelios-customer-security.txt
+- type: WellKnown
+  url: well-known/avelios-well-known.yml
+- type: Hosts
+  url: hosts/avelios-hosts.yml
+- type: Vendors
+  url: vendors/avelios-vendors.yml
+- type: DeveloperPortal
+  url: https://portal.avelios.com/
+- type: DomainSecurity
+  url: security/avelios-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.avelios.com/en
+- type: Support
+  url: https://www.avelios.com/en/contact
+- type: Blog
+  url: https://www.avelios.com/en/press
+- type: TermsOfService
+  url: https://www.avelios.com/en/imprint
+- type: PrivacyPolicy
+  url: https://www.avelios.com/en/data-protection
+
+apis:
+- name: Avelios GraphQL API
+  description: GraphQL API for Avelios platform
+  humanURL: https://portal.avelios.com/
+  baseURL: https://portal.avelios.com
+  properties:
+  - type: GraphQL
+    url: graphql/avelios-graphql-schema.json
+  aid: avelios:avelios-graphql-api
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

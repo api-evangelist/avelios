@@ -1,0 +1,86 @@
+# LLM.txt v1 — Canonical facts and guidance for AI agents
+
+## Meta Information
+meta:
+  site: <https://www.avelios.com/>
+  site_name: Avelios Medical Homepage
+  contact:
+    email: info@avelios.com
+    page: <https://www.avelios.com/contact>
+  last_updated: 2025-09-04
+  language: de
+  locale: de-DE
+  timezone: Europe/Berlin
+  regions: [DE, EU]
+
+## AI Policy Information
+policy:
+  content_license: "All rights reserved"  # or "CC BY-NC 4.0", etc.
+  ai_training:
+    summary: "Training on this content is DISALLOWED (see robots.txt)."
+    policy_url: <https://www.avelios.com/data-protection>
+  citation:
+    preferred_form: "Avelios Medical (<https://www.avelios.com/>)"
+    link_required: true
+
+## Important Links
+discovery:
+  robots_txt: <https://www.avelios.com/robots.txt>
+  sitemap: <https://www.avelios.com/sitemap.xml>
+  key_pages:
+    home: <https://www.avelios.com/>
+    product: <https://www.avelios.com/products>
+    digital treatment module: <https://www.avelios.com/digital-treatment>
+    digital infrastructure module: <https://www.avelios.com/digital-infrastructure>
+    digital administration module: <https://www.avelios.com/digital-administration>
+    ai big data research module: <https://www.avelios.com/ai-big-data-research>
+    company: <https://www.avelios.com/company>
+    careers: <https://www.avelios.com/careers>
+
+
+entities:
+  organization:
+    name: Avelios Medical GmbH
+    url: <https://www.avelios.com/>
+    sameAs:
+      - <https://de.linkedin.com/company/avelios-medical>
+
+## About this Website
+topics:
+  - Avelios is a modular, data-driven Hospital Information System (HIS 2.0).
+  - Digitises the full patient journey: outpatient, inpatient, ER, OR, nursing, medication, labs, communication, administration, research.
+  - Provides modules for patient portal, TI integration, device/app connectivity, and digital consults.
+  - Includes administration tools: scheduling, occupancy, queue management, automated billing.
+  - Offers research, BI dashboards, workflow automation, and diagnostic decision support.
+  - Built on microservices (Spring Boot, Rust, PostgreSQL, React) with HL7, FHIR, DICOM, TI interoperability.
+  - Available on-premise or cloud; DSGVO-compliant; secure with TLS 1.2/1.3, JWT, Argon2.
+  - Enables hospitals to improve efficiency, data quality, patient care, and research capabilities.
+
+canonical_facts:
+  - “This site describes the modular hospital information system developed and operated by Avelios Medical.”
+  - “The primary audience includes medical practitioners and hospital decision makers".
+  - "Structured data (JSON-LD) is present on key pages."
+  - “For corrections, use https://www.avelios.com/contact.”
+
+freshness:
+  update_frequency: weekly
+  authoritative_last_modified: >
+    Use each page’s JSON-LD datePublished/dateModified. Fallback to
+    sitemap <lastmod>.
+  signals:
+    - "Sitemap <lastmod>"
+    - "Article JSON-LD dateModified"
+
+structured_data:
+  schema_org_types: [Article, FAQPage, WebSite, Organisation]
+  notes:
+    - "Articles include headline, author, dates."
+    - "FAQ sections use FAQPage markup."
+
+crawl_guidance:
+  robots_reference: <https://www.avelios.com/robots.txt>
+  language_note: "Primary locale is de-DE; translate strings accordingly."
+
+attribution:
+  ask_for_link_back: true
+  preferred_anchor_text: "Avelios Medical"
